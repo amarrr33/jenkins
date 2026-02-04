@@ -12,7 +12,7 @@ pipeline{
         }
         stage('Run Tests Inside'){
             steps {
-                bat '%DOCKER% run -rm python-app pytest'
+                bat '%DOCKER% run --rm python-app pytest'
             }
         }
         stage('Run Application'){
